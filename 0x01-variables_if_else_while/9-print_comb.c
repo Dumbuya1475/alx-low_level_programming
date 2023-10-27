@@ -5,7 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
-*main - print all possible combinations of single
+*main - print prints all possible combinations of single-digit numbers
 *follow by a new line
 *return: Always 0
 */
