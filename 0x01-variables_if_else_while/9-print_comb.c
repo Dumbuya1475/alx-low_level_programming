@@ -7,7 +7,7 @@
 /**
 *main - print prints all possible combinations of single-digit numbers
 *follow by a new line
-*return: Always 0
+*Return: Always 0
 */
 int main(void)
 {
