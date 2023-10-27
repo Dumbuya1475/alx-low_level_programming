@@ -7,7 +7,7 @@
 /**
 *main - print alphabet in lowercase except e and q
 *follow by a new line
-*return: Always 0
+*Return: Always 0
 */
 int main(void)
 {
@@ -22,5 +22,5 @@ int main(void)
 		letter ++;
 	}
 	putchar('\n');
-	return (0) ;
+	return (0);
 }
