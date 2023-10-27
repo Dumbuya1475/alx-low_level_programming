@@ -4,6 +4,11 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ *main - print the last digit
+ *number store in n
+ *return: Always 0
+ */
 int main(void)
 {
 	int n;
