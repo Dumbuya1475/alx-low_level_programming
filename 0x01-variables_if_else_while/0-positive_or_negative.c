@@ -4,6 +4,10 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+*main - print whether the number stored in the variable n + or -
+*Return: Always 0
+*/
 int main(void)
 {
 	int n;
