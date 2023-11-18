@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nclude "main.h"
 #include <stdio.h>
 
@@ -20,3 +21,27 @@ int main(void)
 					    printf("%d\n", r);
 					        return (0);
 }
+=======
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = is_palindrome("level");
+    printf("%d\n", r);
+    r = is_palindrome("redder");
+    printf("%d\n", r);
+    r = is_palindrome("test");
+    printf("%d\n", r);
+    r = is_palindrome("step on no pets");
+    printf("%d\n", r);
+    return (0);
+}
+>>>>>>> 54b49859fa7c99a23157d89f115593c9d7691808
