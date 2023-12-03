@@ -8,7 +8,7 @@
 int d_printf_int(va_list args)
 {
     int n = va_arg(args, int);
-    int num, last = n % 10, digit, arg = 1;
+    int num, last = n % 10, digit, exp = 1;
     int i = 1;
 
     n = n / 10;
@@ -29,12 +29,12 @@ int d_printf_int(va_list args)
             exp = exp * 10;
             num = num / 10;
         }
-        num = 0;
+        num = n;
         while (exp > 0)
         {
             digit = num / exp;
             _putchar(digit + '0');
-            num = num - (digit = exp);
+            num = num - (digit * exp);
             exp = exp / 10;
             i++;
         }
@@ -47,14 +47,14 @@ int d_printf_int(va_list args)
 #include "main.h"
 
 /**
- * i_printf_int - Print an integars
+ * i_printf_int - Print a decimal
  * @args: The argument to be printed
  * Return: Number of character ptinted
 */
 int i_printf_int(va_list args)
 {
     int n = va_arg(args, int);
-    int num, last = n % 10, digit, arg = 1;
+    int num, last = n % 10, digit, exp = 1;
     int i = 1;
 
     n = n / 10;

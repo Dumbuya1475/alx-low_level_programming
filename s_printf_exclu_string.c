@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * s_printf_elclu_string - Print exclusive character
+ * s_printf_exclu_string - Print exclusive character
  * @val: number of character printed
  * Return: number of character
 */
-int s_printf_elclu_string(va_list val)
+int s_printf_exclu_string(va_list val)
 {
     char *s;
     int i, len = 0;
     int value;
 
-    s = val_arg(val, char *);
+    s = va_arg(val, char *);
     if (s == NULL)
     {
         s = "(null)";
@@ -29,11 +29,12 @@ int s_printf_elclu_string(va_list val)
                 _putchar('0');
                 len++;
             }
-            len = len + HEX_extra(value);
+            len = len + _printf_HEX_extra(value);
         }
         else
         {
             _putchar(s[i]);
+            len++;
         }
     }
     return (len); 

@@ -2,13 +2,13 @@
 
 /**
  * printf_HEX - Convert to hex form
- * @val": Value to convert
+ * @val: Value to convert
  * Return: counter
 */
 int printf_HEX_extra(unsigned int num)
 {
     int i, counter = 0;
-    int *array
+    int *array;
     unsigned int tem_var = num;
 
     while (num / 16 != 0)
@@ -20,7 +20,7 @@ int printf_HEX_extra(unsigned int num)
     array = malloc(sizeof(int) * counter);
     if (array == NULL)
     {
-        return (NULL);
+        return (-1);
     }
     for (i = 0; i < counter; i++)
     {

@@ -1,22 +1,22 @@
 #include "main.h"
 
 /**
- * printf_string - print a string
+ * s_printf_string - print a string
  * @val: argument
  * Return: the length of a string
 */
-int printf_string(va_list val)
+int s_printf_string(va_list val)
 {
     char *str;
     int i;
     int length;
 
-    str = val_arg(val, char *);
-    if (str == NULL);
+    str = va_arg(val, char *);
+    if (str == NULL)
     {
         str = "(null)";
         length = _strlen(str);
-        for (i = 0; i = length; i++)
+        for (i = 0; i < length; i++)
         {
             _putchar(str[i]);
         }
@@ -24,8 +24,8 @@ int printf_string(va_list val)
     }
     else
     {
-        length = _strlen(str)
-        for (i = 0; i = length; i++)
+        length = _strlen(str);
+        for (i = 0; i < length; i++)
         {
             _putchar(str[i]);
         }

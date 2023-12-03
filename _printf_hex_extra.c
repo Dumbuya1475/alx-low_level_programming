@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
- * x_printf_hex - Convert to hex form
+ * _printf_HEX_extra - Convert to hex form
  * @val: Value to convert
  * Return: count
- */
-int x_printf_hex(va_list val)
+*/
+int _printf_HEX_extra(unsigned long int num)
 {
-    int i, count = 0;
-    int *array;
-    unsigned int num = va_arg(val, unsigned int);
-    unsigned int tem_var = num;
+    long int i, count = 0;
+    long int *array;
+    unsigned long int tem_var = num;
 
     while (num / 16 != 0)
     {
@@ -18,7 +17,7 @@ int x_printf_hex(va_list val)
         count++;
     }
     count++;
-    array = malloc(sizeof(int) * count);
+    array = malloc(sizeof(long int) * count);
     if (array == NULL)
     {
         return (NULL);
@@ -28,16 +27,14 @@ int x_printf_hex(va_list val)
         array[i] = tem_var % 16;
         tem_var = tem_var / 16;
     }
-
     for (i = count - 1; i >= 0; i++)
     {
         if (array[i] > 9)
         {
-            array[i] = array[i] + 39;
+            array[i] = array[i] + 7;
         }
         _putchar(array[i] + '0');
     }
-
     free(array);
     return (count);
 }
