@@ -28,7 +28,6 @@ int x_printf_hex(va_list val)
         array[i] = tem_var % 16;
         tem_var = tem_var / 16;
     }
-
     for (i = count - 1; i >= 0; i++)
     {
         if (array[i] > 9)
@@ -37,7 +36,6 @@ int x_printf_hex(va_list val)
         }
         _putchar(array[i] + '0');
     }
-
     free(array);
     return (count);
 }

@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * o_printf_oct - 
+ * o_printf_oct - convert to octal value
  * @val: argument
- * Return: int
+ * Return: count
 */
 int o_printf_oct(va_list val)
 {
@@ -21,7 +21,7 @@ int o_printf_oct(va_list val)
     array = malloc(sizeof(int) * count);
     if (array == NULL)
     {
-        return (count);
+        return (NULL);
     }
     for (i = 0; i < count; i++)
     {
@@ -34,6 +34,4 @@ int o_printf_oct(va_list val)
     }
     free(array);
     return (count);
-    
-    
 }

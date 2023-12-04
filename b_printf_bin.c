@@ -17,7 +17,7 @@ int b_printf_bin(va_list val)
     {
         p = ((a << (32 - i)) & num);
 
-        if (p >> (31 - i))
+        if (p >> (31- i))
         {
             flag = 1;
         }
@@ -34,5 +34,4 @@ int b_printf_bin(va_list val)
         _putchar('0');
     }
     return (count);
-    
 }
