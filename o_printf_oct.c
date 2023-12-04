@@ -21,7 +21,7 @@ int o_printf_oct(va_list val)
     array = malloc(sizeof(int) * count);
     if (array == NULL)
     {
-        return (NULL);
+        return (count);
     }
     for (i = 0; i < count; i++)
     {

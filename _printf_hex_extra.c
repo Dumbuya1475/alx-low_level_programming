@@ -20,7 +20,7 @@ int _printf_HEX_extra(unsigned long int num)
     array = malloc(sizeof(long int) * count);
     if (array == NULL)
     {
-        return (NULL);
+        return (count);
     }
     for (i = 0; i < count; i++)
     {

@@ -34,7 +34,7 @@ int u_printf_unsignint(va_list args)
         {
             digit = num / exp;
             _putchar(digit + '0');
-            num = num - (digit = * exp);
+            num = num - (digit = exp);
             exp = exp / 10;
             i++;
         }

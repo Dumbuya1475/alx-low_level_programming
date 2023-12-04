@@ -34,5 +34,4 @@ int _printf_HEX_extra(unsigned long int num);
 int r_printf_reverse(va_list val);
 int R_printf_rot13(va_list val);
 
-
 #endif

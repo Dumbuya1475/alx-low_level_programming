@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 
     match m[] = {
         {"%c", c_printf_char}, {"%s", s_printf_string}, {"%%", _print_37}, {"%d", d_printf_int}, {"%i", d_printf_int}, {"%x", x_printf_hex}, {"%r", r_printf_reverse},
-        {"%R", R_printf_rot13}, {"%b", b_printf_bin}, {"%u", u_printf_unsignint}, {"%X", X_printf_HEX}, {"%o", o_printf_oct}, {"%S", s_printf_exclu_string}, {"%x", x_printf_hex}, {"%p", p_printf_pointer},
+        {"%R", R_printf_rot13}, {"%b", b_printf_bin}, {"%u", u_printf_unsignint}, {"%X", X_printf_HEX}, {"%o", o_printf_oct}, {"%S", s_printf_exclu_string}, {"%x", x_printf_hex}, {"%p", p_printf_pointer}, {"%X", _printf_HEX_extra},
         {NULL, NULL}
     };
 
