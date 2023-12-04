@@ -33,5 +33,11 @@ int b_printf_bin(va_list val)
         count++;
         _putchar('0');
     }
+<<<<<<< HEAD
     return (count);
 }
+=======
+    return (count);    
+}
+
+>>>>>>> 88befdde39c51e35e0a1d4a5fbfea7dcd86dc7cb

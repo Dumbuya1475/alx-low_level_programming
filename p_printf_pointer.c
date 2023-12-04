@@ -11,7 +11,7 @@ int p_printf_pointer(va_list val)
     char *str;
     int len = 0;
 
-    a = (uintptr_t)va_arg(val, void *);
+    a = (intptr_t)va_arg(val, void *);
 
     if (a == 0)
     {
