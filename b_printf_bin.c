@@ -33,6 +33,6 @@ int b_printf_bin(va_list val)
         count++;
         _putchar('0');
     }
-    return (count);
-    
+    return (count);    
 }
+
