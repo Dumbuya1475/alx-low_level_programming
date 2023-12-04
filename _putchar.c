@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _putchar - is a function that selects the correct function to print.
  * @format: identifier to look for.
@@ -6,5 +7,5 @@
  */
 int _putchar(char c)
 {
-     return (write(1, &c, 2));
+	return (write(1, &c, 2));
 }

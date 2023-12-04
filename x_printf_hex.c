@@ -19,16 +19,13 @@ int x_printf_hex(va_list val)
     }
     count++;
     array = malloc(sizeof(int) * count);
-    if (array == NULL)
-    {
-        return (count);
-    }
+
     for (i = 0; i < count; i++)
     {
         array[i] = tem_var % 16;
         tem_var = tem_var / 16;
     }
-    for (i = count - 1; i >= 0; i++)
+	for (i = count - 1; i >= 0; i--)
     {
         if (array[i] > 9)
         {

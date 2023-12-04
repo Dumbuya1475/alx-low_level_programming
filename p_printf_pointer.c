@@ -1,27 +1,31 @@
 #include "main.h"
 
 /**
- * p_printf_pointer - Custom printf function for pointers
- * @val: Pointer argument
- * Return: Number of characters printed (excluding null byte)
-*/
+ * p_printf_pointer - prints a hexadecimal number representing a pointer.
+ * @val: arguments.
+ * Return: counter.
+ */
 int p_printf_pointer(va_list val)
 {
-    unsigned long int a;
-    char *str;
-    int len = 0;
+    void *ptr;
+    char *s = "(nil)";
+    uintptr_t a;
+    int b;
+    int i;
 
-    a = (intptr_t)va_arg(val, void *);
-
-    if (a == 0)
+    ptr = va_arg(val, void*);
+    if (ptr == NULL)
     {
-        len += _printf("(nil)");
-        return (len);
+        for (i = 0; s[i] != '\0'; i++)
+        {
+            _putchar(s[i]);
+        }
+        return (i);
     }
 
-    str = "0x";
-    len += _printf("%s", str);
-    len += _printf_HEX_extra(a);
-
-    return (len);
+    a = (uintptr_t)ptr;
+    _putchar('0');
+    _putchar('x');
+    b = x_printf_hex(a);
+    return (b + 2);
 }

@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 typedef struct format
 {
@@ -32,7 +33,7 @@ int b_printf_bin(va_list val);
 int u_printf_unsignint(va_list args);
 int o_printf_oct(va_list val);
 int x_printf_hex(va_list val);
-int X_printf_HEX(va_list val);
+int _X_printf_HEX(va_list val);
 
 /*Tax 4*/
 /*Tax 5*/

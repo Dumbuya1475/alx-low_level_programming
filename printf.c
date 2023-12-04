@@ -1,68 +1,45 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
-
+#include "main.h"
 /**
- * _printf - Custom printf function
- * @format: Format string
- *
- * Return: Number of characters printed (excluding null byte)
+ * _printf - clone the printf function.
+ * @format: identifier to look for.
+ * Return: the length of the string.
  */
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
-    va_list args;
-    int count = 0;
+	match m[] = {
+		{"%s", s_printf_string}, {"%c", c_printf_char},
+		{"%%", _printf_37},
+		{"%i", i_printf_int}, {"%d", d_printf_dec}, {"%r", r_printf_reverse},
+		{"%R", R_printf_rot13}, {"%b", b_printf_bin}, {"%u", u_printf_unsignint},
+		{"%o", o_printf_oct}, {"%x", x_printf_hex}, {"%X", _X_printf_HEX},
+		{"%S", s_printf_exclu_string}, {"%p", p_printf_pointer}
+	};
 
-    va_start(args, format);
+	va_list args;
+	int i = 0, j, len = 0;
 
-    while (*format != '\0') {
-        if (*format == '%') {
-            format++; 
-            if (*format == '\0')
-                break;
+	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 
-            switch (*format) {
-                case 'c':
-                    count += printf("%c", va_arg(args, int));
-                    break;
-                case 's':
-                    count += printf("%s", va_arg(args, char *));
-                    break;
-                case 'd':
-                case 'i':
-                    count += printf("%d", va_arg(args, int));
-                    break;
-                case 'u':
-                    count += printf("%u", va_arg(args, unsigned int));
-                    break;
-                case 'o':
-                    count += printf("%o", va_arg(args, unsigned int));
-                    break;
-                case 'x':
-                    count += printf("%x", va_arg(args, unsigned int));
-                    break;
-                case 'X':
-                    count += printf("%X", va_arg(args, unsigned int));
-                    break;
-                case 'p':
-                    count += printf("%p", va_arg(args, void *));
-                    break;
-                case '%':
-                    count += printf("%%");
-                    break;
-                default:
-                    count += printf("%%%c", *format);
-            }
-        } else {
-            putchar(*format);
-            count++;
-        }
-
-        format++;
-    }
-
-    va_end(args);
-
-    return count;
+Here:
+	while (format[i] != '\0')
+	{
+		j = 13;
+		while (j >= 0)
+		{
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			{
+				len += m[j].f(args);
+				i = i + 2;
+				goto Here;
+			}
+			j--;
+		}
+		_putchar(format[i]);
+		len++;
+		i++;
+	}
+	va_end(args);
+	return (len);
 }
-

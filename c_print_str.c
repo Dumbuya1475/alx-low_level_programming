@@ -7,13 +7,13 @@
 */
 int _strlen(char *str)
 {
-    int i;
+	int stl;
 
-    for (i = 0; str[i] != 0; i++)
-    {
-        ;
-    }
-    return (i);
+	for (stl = 0; str[stl] != 0; stl++)
+	{
+		;
+	}
+	return (stl);
 }
 
 /**
@@ -23,11 +23,11 @@ int _strlen(char *str)
 */
 int _strlenc(const char *str)
 {
-    int i;
+	int stl;
 
-    for (i = 0; str[i] != 0; i++)
-    {
-        ;
-    }
-    return (i);
+	for (stl = 0; str[stl] != 0; stl++)
+	{
+		;
+	}
+	return (stl);
 }
