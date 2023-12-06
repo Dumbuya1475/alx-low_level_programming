@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _printf_HEX_extra - Convert to hex form
+ * _printf_hex_extra - Convert to hex form
  * @val: Value to convert
  * Return: count
 */
-int _printf_HEX_extra(unsigned long int num)
+int _printf_hex_extra(unsigned long int num)
 {
     long int i, count = 0;
     long int *array;

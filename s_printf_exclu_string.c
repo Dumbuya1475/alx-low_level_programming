@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * s_printf_exclu_string - Print exclusive character
+ * S_printf_exclu_string - Print exclusive character
  * @val: number of character printed
  * Return: number of character
 */
-int s_printf_exclu_string(va_list val)
+int S_printf_exclu_string(va_list val)
 {
 	char *s;
 	int i, len = 0;
@@ -29,7 +29,7 @@ int s_printf_exclu_string(va_list val)
 				_putchar('0');
 				len++;
 			}
-			len = len + _printf_HEX_extra(value);
+			len = len + printf_HEX_extra(value);
 		}
 		else
 		{

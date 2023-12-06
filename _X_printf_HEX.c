@@ -10,21 +10,16 @@ int _X_printf_HEX(va_list val)
 	int count = 0;
 	int i;
 	int *array;
-	unsigned int tem_var;
 	unsigned int value = va_arg(val, unsigned int);
-
-	tem_var = value;
+	unsigned int tem_var = value;
 
 	while (tem_var / 16 != 0)
 	{
-		tem_var = tem_var / 16;
+		value = value / 16;
 		count++;
 	}
 	count++;
 	array = malloc(sizeof(int) * count);
-
-	tem_var = value;
-
 	for (i = 0; i < count; i++)
 	{
 		array[i] = tem_var % 16;
