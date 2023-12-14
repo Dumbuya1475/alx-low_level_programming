@@ -1,22 +1,22 @@
 #include "main.h"
 
 /**
- * set_bit - sets value of a bit to 1 at a given index
- * @n: decimal number passed by pointer
- * @index: index position to change, starting from 0
+ * set_bit - sets the value of a bit to 1.
+ * at a given index.
+ * @n: pointer of an unsigned long int.
+ * @index: index of the bit.
  *
- * Return: 1 if it workes, -1 if if it dosen't
+ * Return: 1 if it worked, -1 if it didn't.
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int result;
-	unsigned long int mask;
+	unsigned int m;
 
-	if (index > 64)
+	if (index > 63)
 		return (-1);
 
-	mask = 1 << index;
-	result = mask | *n;
+	m = 1 << index;
+	*n = (*n | m);
 
-	return (result);
+	return (1);
 }
