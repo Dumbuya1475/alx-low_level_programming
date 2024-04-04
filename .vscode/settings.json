@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "C_Cpp_Runner.cCompilerPath": "C:/MinGW/bin/gcc",
   "C_Cpp_Runner.cppCompilerPath": "C:/MinGW/bin/g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
@@ -62,4 +63,11 @@
     "stdio.h": "c"
 },
 "C_Cpp.errorSquiggles": "enabled"
+=======
+	"C_Cpp.errorSquiggles": "disabled",
+	"files.associations": {
+		"stdarg.h": "c",
+		"stdio.h": "c"
+	}
+>>>>>>> 8046fb9ed8694620e1204e21633340e924bc41cd
 }

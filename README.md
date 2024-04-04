@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ALX Cohort 9![image](https://user-images.githubusercontent.com/105258746/189962379-f8aca8d6-0a1b-4367-8360-af2dd481734e.png)
 
 ![Repo size](https://img.shields.io/github/repo-size/lordwill1/alx-low_level_programming)
@@ -29,3 +30,6 @@ Directory | Files
 [0x08-recursion](https://github.com/Lordwill1/alx-low_level_programming/tree/master/0x08-recursion)
 [0x09-static_libraries]()
 Process.
+=======
+My first printf project
+>>>>>>> 8046fb9ed8694620e1204e21633340e924bc41cd
